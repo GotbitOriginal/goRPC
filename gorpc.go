@@ -78,7 +78,9 @@ func NewGorpc(swap, left, right string) (Gorpc, error) {
 	}, nil
 }
 
-func (G *Gorpc) GetPrice(prec int64) (float64, error) {
+func (G *Gorpc) GetPrice() (float64, error) {
+	var prec int64 = 18
+
 	reserves, err := G.pair.GetReserves(nil)
 	if err != nil {
 		return 0.0, fmt.Errorf("Error in get reserves: %s", err)
