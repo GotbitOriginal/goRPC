@@ -1,4 +1,4 @@
-module gorpc
+module github.com/GotbitOriginal/goRPC
 
 go 1.14
 

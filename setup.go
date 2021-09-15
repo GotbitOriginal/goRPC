@@ -2,8 +2,9 @@ package gorpc
 
 import (
 	"fmt"
-	"gorpc/factorycontract"
-	"gorpc/tokencontract"
+
+	"github.com/GotbitOriginal/goRPC/factorycontract"
+	"github.com/GotbitOriginal/goRPC/tokencontract"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"

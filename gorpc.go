@@ -2,10 +2,11 @@ package gorpc
 
 import (
 	"fmt"
-	"gorpc/factorycontract"
-	"gorpc/paircontract"
 	"math/big"
 	"time"
+
+	"github.com/GotbitOriginal/goRPC/factorycontract"
+	"github.com/GotbitOriginal/goRPC/paircontract"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
