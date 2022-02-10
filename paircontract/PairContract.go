@@ -6,6 +6,7 @@ package paircontract
 import (
 	"math/big"
 	"strings"
+	"fmt"
 
 	ethereum "github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi"
@@ -405,6 +406,9 @@ func (_Paircontract *PaircontractCaller) GetReserves(opts *bind.CallOpts) (struc
 		BlockTimestampLast uint32
 	})
 
+	if len(out) < 3 {
+		return *outstruct, fmt.Errorf("ERROR: len(out) < 3")
+	}
 	outstruct.Reserve0 = out[0].(*big.Int)
 	outstruct.Reserve1 = out[1].(*big.Int)
 	outstruct.BlockTimestampLast = out[2].(uint32)
