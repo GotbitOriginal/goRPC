@@ -1,7 +1,7 @@
-package gorpc
+package price
 
 import (
-	"errors"
+	"fmt"
 	"math/big"
 )
 
@@ -16,7 +16,7 @@ func floatify(intString string, precision int) (float64, error) {
 	q := intString[:index] + "." + intString[index:]
 	f, ok := new(big.Float).SetString(q)
 	if !ok {
-		return 0, errors.New("!!floatify(): Could not parse this resulting string to float: " + q)
+		return 0, fmt.Errorf("can't parse this resulting string to float: %s" + q)
 	}
 	res, _ := f.Float64()
 	return res, nil
